@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
+
+modal {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.75rem 3.5rem;
+  margin: 5rem 2rem;
+  border: none;
+  background-color: #fff;
+  color: #444;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.close-modal {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.number {
+  background: #eee;
+  color: #333;
+  font-size: 6rem;
+  width: 133rem;
+  padding: 3rem 0rem;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.temp {
+  background: white;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 5rem;
+  padding: 2.5rem;
+  width: 20rem;
+  text-align: center;
+  display: inline;
+  margin-bottom: 1rem;
+  position: center;
+  bottom: 0;
+  left: 0;
+  width: 200px;
+  border: 3px solid #73ad21;
+}
+.time {
+  background: grey;
+  border: 4px solid #eee;
+  font-family: inherit;
+  color: inherit;
+  font-size: 5rem;
+  padding: 2.5rem;
+  width: 25rem;
+  text-align: center;
+  display: inline;
+  margin-bottom: 3rem;
+}
+
+.btn {
+  border: black;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ccc;
+}
+
+.message {
+  margin-bottom: 8rem;
+  height: 1rem;
+  font-size: 5rem;
+}
+
+.label-score {
+  margin-bottom: 2rem;
+}
+
+.message {
+  position: absolute;
+  top: 0;
+  right: 200;
+  font-size: 1rem;
+}
+.container {
+  position: relative;
+}
+
+.topleft {
+  position: absolute;
+  top: 90px;
+  left: 50px;
+  width: 100px;
+  background: grey;
+  font-family: inherit;
+  color: inherit;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.info {
+  border: black;
+  background-color: pink;
+  color: black;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+}
+
+.topleft {
+  position: absolute;
+  top: 90px;
+  left: 50px;
+  width: 100px;
+  background: grey;
+  font-family: inherit;
+  color: inherit;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.topleft2 {
+  position: absolute;
+  top: 90px;
+  left: 50px;
+  width: 100px;
+  background: grey;
+  font-family: inherit;
+  color: inherit;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
