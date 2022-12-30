@@ -7,42 +7,53 @@ let bakeTime = "";
 let isProved = "";
 let weather = "";
 let Challenge = 0;
+let captionText;
+let pictureSrc;
 let secretNumber =
   Math.trunc(Math.random() * 15) * (Math.round(Math.random()) * 2 - 1);
 console.log(secretNumber);
 if (secretNumber == 0) {
   weather = "lovely British 🌧️";
 } else {
-  weather = secretNumber > 0 ? "sunny 🌞" : "freezing 🥶";
+  weather = secretNumber < 0 ? "sunny 🌞" : "freezing 🥶";
 }
 console.log(weather);
 //Gives a nudge to the bakers on how to fix their bakes
+
 document.querySelector(
   ".message"
-).textContent = `Its a ${weather} day in the tent. Welcome Bakers Today we have Giulia joining us. On your marks get set....bake!`;
+).textContent = `Its a ${weather} day in the tent. Welcome Bakers! Today we have Giulia joining us. On your marks get set....bake!`;
 
 const bread = {
   name: "Paul's Hollywood Bread",
-  va: 8050,
+  va: 11700,
+  image: "assets/bread.png",
 };
 
 const sponge = {
   name: "Victorian Sponge",
-  va: 3333,
+  va: 9450,
+  image: "assets/sponge.png",
 };
 
 const cake = {
   name: "Savory chocolate cake",
-  va: 5500,
+  va: 12950,
+  image: "assets/cake.png",
 };
 
 const crust = {
   name: "Crispy Watercrust Pastry",
-  va: 2200,
+  va: 3000,
+  image: "assets/crust.png",
 };
 
 function pass(item) {
   return item.va * (1 + secretNumber / 100);
+}
+
+function pic(item) {
+  return item.image;
 }
 //this creates a up to +/- 15% variance
 
@@ -66,9 +77,11 @@ function bake(temp, time, proved, target) {
 //restrict the temp to 350-450
 document.querySelector(".check").addEventListener("click", function () {
   const output = document.querySelector("#test option:checked").value;
+
   console.log(output);
   let comp = pass(eval(output));
   console.log(comp);
+  polaroidId.src = pic(eval(output));
   ovenTemp = Number(document.querySelector(".topleft").value);
   bakeTime = Number(document.querySelector(".topleft2").value);
   console.log(ovenTemp, typeof ovenTemp);
